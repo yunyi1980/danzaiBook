@@ -7,8 +7,7 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: '',
-    totalAsset: 1000,
+    requestResult: ''
   },
 
   onLoad: function() {
