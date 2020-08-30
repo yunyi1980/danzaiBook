@@ -1,2 +1,25 @@
 <!--pages/book/book.wxml-->
-<text>pages/book/book.wxml</text>
+<view class="page">
+	<view class="columnContainer titleContainer">
+		<view class="total">
+			<text class="container">总资产（元）</text>
+			<text class="container">{{totalAsset}}</text>
+		</view>
+		<view class="rowContainer">
+			<view class="left">
+				<text class="container">累计收益（元）</text>
+				<text class="container">{{totalAsset}}</text>
+			</view>
+			<view class="line"></view>
+			<view>
+				<text class="container">累计投入（元）</text>
+				<text class="container">{{totalAsset}}</text>
+			</view>
+		</view>
+	</view>
+
+	<block wx:for="{{accountList}}" wx:for-index="idx" wx:for-item="account" wx:key="*this">
+		<assestContainer account="{{account}}"></assestContainer>
+	</block>
+
+</view>

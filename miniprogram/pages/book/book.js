@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    totalAsset: 1000,
+    accountList: [],
+    array: [1, 2, 3, 4]
   },
 
   /**
@@ -19,14 +21,29 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.setData({
+      accountList: [{
+        accountId: 1,
+        name: '账本1',
+        currAssest: 1000,
+        currency: 'CNY',
+        createTime: '2020-08-30'
+      },
+      {
+        accountId: 1,
+        name: '账本2demo',
+        currAssest: 1000,
+        currency: 'CNY',
+        createTime: '2020-08-30'
+      }]
+    })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
   },
 
   /**

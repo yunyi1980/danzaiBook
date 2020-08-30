@@ -1,0 +1,16 @@
+<!--components/assestContainer.wxml-->
+<view class="listContainer">
+		<view class="listDesc">
+			<text>{{account.name}}</text>
+			<text>实时汇率0.09</text>
+		</view>
+		<view class="listDetail">
+			<view class="listItem">
+				<text>总资产</text>
+				<text>{{account.currAssest}}</text>
+			</view>
+			<view class="listItem">累计</view>
+			<view class="listItem">累计</view>
+			<view>年化</view>
+		</view>
+	</view>

@@ -15,3 +15,18 @@
 · active #1296db
 .unactive #515151
 
+## 数据字典
+
+user:用户
+nickName:昵称
+openId: 唯一标识
+
+assest:资产
+currency:币种 CNY|HK|US|EUR
+
+CapitalFlow: 资金流水
+actionType: 操作类型 'in'|'out' [转入，转出]
+
+ExchangeRates: 汇率表
+
+
