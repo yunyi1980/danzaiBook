@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "x-assestContainer": "/components/assestContainer/assestContainer"
+    "x-bookContainer": "/components/bookContainer/bookContainer"
   }
 }

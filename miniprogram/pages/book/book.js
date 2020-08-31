@@ -96,6 +96,13 @@ Page({
         console.error('[云函数] [getBook] 调用失败', err)
       }
     })
+  },
+
+  onAddBook: function () {
+    wx.navigateTo({
+      url: '../userConsole/userConsole'
+    })
   }
+
 
 })

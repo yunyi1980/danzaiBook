@@ -3,12 +3,12 @@
   background-color: rgb(245, 246, 251);
 }
 
-columnContainer {
+.column-container {
   display: flex;
   flex-direction: column;
 }
 
-.rowContainer {
+.row-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -18,14 +18,19 @@ columnContainer {
   flex: 1;
 }
 
-.titleContainer {
+.title-container {
   background-color: #1296db;
   color: white;
 }
 
-.titleContainer .line {
+.title-container .line {
   border-right: 1rpx solid #fff;
   border-left: 1rpx solid #fff;
   opacity: 0.5;
+}
+
+.btn-container {
+  background-color: #fff;
+  width: 100%;
 }
 
