@@ -21,29 +21,29 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.setData({
-      accountList: [{
-        accountId: 1,
-        name: '账本1',
-        currAssest: 1000,
-        currency: 'CNY',
-        createTime: '2020-08-30'
-      },
-      {
-        accountId: 1,
-        name: '账本2demo',
-        currAssest: 1000,
-        currency: 'CNY',
-        createTime: '2020-08-30'
-      }]
-    })
+    // this.setData({
+    //   bookList: [{
+    //     accountId: 1,
+    //     name: '账本1',
+    //     currAssest: 1000,
+    //     currency: 'CNY',
+    //     createTime: '2020-08-30'
+    //   },
+    //   {
+    //     accountId: 1,
+    //     name: '账本2demo',
+    //     currAssest: 1000,
+    //     currency: 'CNY',
+    //     createTime: '2020-08-30'
+    //   }]
+    // })
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   
+    this.getBook();
   },
 
   /**
@@ -79,5 +79,23 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getBook: function () {
+    // 调用云函数
+    wx.cloud.callFunction({
+      name: 'getBook',
+      data: {},
+      success: res => {
+        console.log('[云函数] [getBook] user openid: ', res.result.bookList)
+        this.setData({
+          bookList: res.result.bookList
+        })
+      },
+      fail: err => {
+        console.error('[云函数] [getBook] 调用失败', err)
+      }
+    })
   }
+
 })
