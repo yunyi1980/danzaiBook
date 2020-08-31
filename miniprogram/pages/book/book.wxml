@@ -18,8 +18,8 @@
 		</view>
 	</view>
 
-	<block wx:for="{{accountList}}" wx:for-index="idx" wx:for-item="account" wx:key="*this">
-		<assestContainer account="{{account}}"></assestContainer>
+	<block wx:for="{{accountList}}" wx:for-index="idx" wx:for-item="account" wx:key="name">
+		<x-assestContainer account="{{account}}"></x-assestContainer>
 	</block>
 
 </view>

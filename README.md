@@ -19,7 +19,7 @@
 
 user:用户
 nickName:昵称
-openId: 唯一标识
+openid: 唯一标识
 
 assest:资产
 currency:币种 CNY|HK|US|EUR
