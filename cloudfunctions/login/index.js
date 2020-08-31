@@ -35,7 +35,7 @@ exports.main = async (event, context) => {
   if (isNewUser) {
     const data = {
       openid: wxContext.OPENID,
-      unionid: wxContext.UNIONID
+      unionid: wxContext.UNIONID,
     }
     userCollection.add({ data })
       .then(() => console.log('插入成功'))
