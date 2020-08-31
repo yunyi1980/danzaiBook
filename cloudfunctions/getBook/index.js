@@ -1,33 +1,34 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 
-cloud.init()
+cloud.init({
+  env: cloud.DYNAMIC_CURRENT_ENV
+})
 
-const db = cloud.database()
+/* 
+获取用户的账本列表
+ */
+const getBooklist = async () => {
+  const { OPENID } = cloud.getWXContext()
+  const db = cloud.database()
+  const res = await db.collection('accountBook').where({
+    openid: OPENID
+  }).get()
+
+  return res.data
+}
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  const wxContext = cloud.getWXContext()
+  let bookList = []
 
-  const userCollection = db.collection('user');
-
-  const isNewUser = await userCollection.where({
-    openid: wxContext.OPENID // 填入当前用户 openid
-  }).count() === 0
-
-  // 新用户
-  if (isNewUser) {
-    const data = {
-      openid: xContext.OPENID,
-      unionid: wxContext.UNIONID
-    }
-    userCollection.add({ data })
+  try {
+    bookList = await getBooklist()
+  } catch (err) {
+    // do nothing
   }
 
   return {
-    event,
-    openid: wxContext.OPENID,
-    appid: wxContext.APPID,
-    unionid: wxContext.UNIONID,
+    bookList
   }
 }

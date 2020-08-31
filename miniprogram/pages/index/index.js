@@ -8,7 +8,6 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    totalAsset: 1000,
   },
 
   onLoad: function() {
