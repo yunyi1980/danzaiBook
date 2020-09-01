@@ -1,11 +1,11 @@
-// pages/addBook/addBook.js
+import {toFormatString} from '../../utils/dateHelper'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
   },
 
   /**
@@ -19,7 +19,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    const currDate = toFormatString(new Date())
+    this.setData({
+      currDate
+    })
   },
 
   /**
@@ -62,5 +65,40 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  onDateChange: function (event) {
+    const {detail:{value}} = event
+    this.setData({
+      date: value,
+    })
+  },
+
+  onNameChange: function (event) {
+    const {detail:{value}} = event
+    this.setData({
+      bookName: value,
+    })
+  },
+
+  onAmountChange: function (event) {
+    const {detail:{value}} = event
+    this.setData({
+      currAmount: value,
+    })
+  },
+
+  onAddBook: function () {
+    const {bookName, currAmount, date} = this.data;
+    wx.cloud.callFunction({
+      name: "addBook",
+      data:{
+        bookName,
+        currAmount,
+        date
+      },
+    }).then(res => {
+      console.log('调用success', res)
+    }).catch((err)=>console.log(err))
   }
 })
