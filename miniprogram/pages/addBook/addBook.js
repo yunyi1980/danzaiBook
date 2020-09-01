@@ -84,17 +84,17 @@ Page({
   onAmountChange: function (event) {
     const {detail:{value}} = event
     this.setData({
-      currAmount: value,
+      amount: value,
     })
   },
 
   onAddBook: function () {
-    const {bookName, currAmount, date} = this.data;
+    const {bookName, amount, date} = this.data;
     wx.cloud.callFunction({
       name: "addBook",
       data:{
         bookName,
-        currAmount,
+        amount,
         date
       },
     }).then(res => {
