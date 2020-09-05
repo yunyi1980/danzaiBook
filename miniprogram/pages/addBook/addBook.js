@@ -99,6 +99,9 @@ Page({
       },
     }).then(res => {
       console.log('调用success', res)
+      wx.navigateBack({
+        delta: 0,
+      })
     }).catch((err)=>console.log(err))
   }
 })
