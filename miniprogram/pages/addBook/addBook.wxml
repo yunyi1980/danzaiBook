@@ -2,10 +2,10 @@
 <view class="page">
 	<view>要新增一个账户</view>
 	<view>
-		<input class="weui-input" maxlength="20" placeholder="请输入账户名称" bindconfirm="onNameChange" />
+		<input class="weui-input" maxlength="20" placeholder="请输入账户名称" bindinput="onNameChange" />
 	</view>
 	<view>
-		<input class="weui-input" type="number" placeholder="总资产" bindconfirm="onAmountChange" />
+		<input class="weui-input" type="number" placeholder="总资产" bindinput="onAmountChange" />
 	</view>
 	<picker mode="date" bindchange="onDateChange">
 		<view class="picker">

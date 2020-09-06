@@ -21,7 +21,8 @@ Page({
   onReady: function () {
     const currDate = toFormatString(new Date())
     this.setData({
-      currDate
+      currDate,
+      date: currDate
     })
   },
 
