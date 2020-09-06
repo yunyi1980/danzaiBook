@@ -21,9 +21,16 @@ Page({
    */
   onReady: function () {
     const currDate = toFormatString(new Date())
+    const newBook: book = {
+      bookName: '',
+      bookid: '',
+      initDate: new Date(),
+      initAmount: 0,
+      currency: 'CNY',
+    }
     this.setData({
       currDate,
-      date: currDate
+      ...newBook
     })
   },
 
@@ -65,9 +72,9 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  // onShareAppMessage: function () {
 
-  },
+  // },
 
   onDateChange: function (event) {
     const {detail:{value}} = event
