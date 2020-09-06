@@ -110,6 +110,15 @@ Page({
     this.setData({
       isShowAmount: !this.data.isShowAmount
     })
-  }
+  },
+
+  /**
+   * 
+   */
+  onItemTap: function (){
+    wx.navigateTo({
+      url: "../addRecord/addRecord"
+    })
+  },
 
 })

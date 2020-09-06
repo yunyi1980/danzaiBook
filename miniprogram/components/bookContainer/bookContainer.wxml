@@ -1,5 +1,5 @@
 <!--components/assestContainer.wxml-->
-<view class="listContainer">
+<view class="listContainer" bindtap="onBookTap">
 	<view class="listDesc">
 		<text>{{book.bookName}}</text>
 		<text>实时汇率0.09</text>
@@ -7,7 +7,7 @@
 	<view class="listDetail">
 		<view class="listItem">
 			<text>总资产</text>
-			<text  wx:if="{{isShowAmount}}">{{book.currAmount}}</text>
+			<text wx:if="{{isShowAmount}}">{{book.currAmount}}</text>
 			<text wx:else>{{hiddenFlag}}</text>
 		</view>
 		<view class="listItem">
