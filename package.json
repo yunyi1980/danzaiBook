@@ -1,0 +1,23 @@
+{
+  "name": "danzaibook",
+  "version": "0.0.1",
+  "description": "这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunyi1980/danzaiBook.git"
+  },
+  "author": "yunyiGG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yunyi1980/danzaiBook/issues"
+  },
+  "homepage": "https://github.com/yunyi1980/danzaiBook#readme",
+  "dependencies": {
+    "miniprogram-api-typings": "^3.0.2",
+    "typescript": "^4.0.2"
+  }
+}
