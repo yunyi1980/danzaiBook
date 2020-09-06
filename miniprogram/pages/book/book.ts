@@ -1,4 +1,5 @@
 import {book} from '../../dataModel/data'
+import {HIDDEN_AMOUNT_FLAG} from '../../utils/commonHelper'
 
 interface pageData {
   bookList: book[],
@@ -8,52 +9,33 @@ interface pageData {
   isShowAmount?: boolean, // 是否显示资产
 }
 
-// interface response extends pageData{
-//   result: {
-//     bookList: book[]
-//   }
-// }
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isShowAmount: true
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+    isShowAmount: true,
+    hiddenFlag: HIDDEN_AMOUNT_FLAG,
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.getBook();
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.getBook();
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
 
   },
 
@@ -121,6 +103,9 @@ Page({
     }
   },
 
+  /**
+   * 显示/隐藏 资产
+   */
   onToggleShowAmount: function () {
     this.setData({
       isShowAmount: !this.data.isShowAmount

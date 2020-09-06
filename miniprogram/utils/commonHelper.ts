@@ -8,3 +8,5 @@ export function toFormatString(pDate: Date): string {
 
   return `${year}-${formatMonth}-${formateDate}`
 }
+
+export const HIDDEN_AMOUNT_FLAG: string = '****'

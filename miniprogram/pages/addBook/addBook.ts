@@ -1,4 +1,4 @@
-import { toFormatString } from '../../utils/dateHelper'
+import { toFormatString } from '../../utils/commonHelper'
 import { book } from '../../dataModel/data'
 
 interface pageData extends book {
@@ -10,13 +10,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
   },
 
   /**

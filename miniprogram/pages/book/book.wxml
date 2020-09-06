@@ -3,17 +3,20 @@
 	<view class="column-container title-container">
 		<view class="total column-container item-center">
 			<text class="container">总资产（元）</text>
-			<text class="container">{{totalAmount}}</text>
+			<text class="container" wx:if="{{isShowAmount}}">{{totalAmount}}</text>
+			<text class="container" wx:else>{{hiddenFlag}}</text>
 		</view>
 		<view class="row-container space-around title-bottom">
 			<view class="left column-container item-center">
 				<text class="container">累计收益（元）</text>
-				<text class="container">{{totalIncome}}</text>
+				<text class="container" wx:if="{{isShowAmount}}">{{totalIncome}}</text>
+				<text class="container" wx:else>{{hiddenFlag}}</text>
 			</view>
 			<view class="line"></view>
 			<view class="column-container item-center">
 				<text class="container">累计投入（元）</text>
-				<text class="container">{{totalCost}}</text>
+				<text class="container" wx:if="{{isShowAmount}}">{{totalCost}}</text>
+				<text class="container" wx:else>{{hiddenFlag}}</text>
 			</view>
 		</view>
 	</view>
@@ -28,7 +31,7 @@
 			<text>隐藏汇总</text>
 		</view>
 		<block wx:for="{{bookList}}" wx:for-index="idx" wx:for-item="book" wx:key="bookName">
-			<x-bookContainer book="{{book}}"></x-bookContainer>
+			<x-bookContainer book="{{book}}" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}"></x-bookContainer>
 		</block>
 	</view>
 

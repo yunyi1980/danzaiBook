@@ -1,16 +1,22 @@
 <!--components/assestContainer.wxml-->
 <view class="listContainer">
-		<view class="listDesc">
-			<text>{{book.bookName}}</text>
-			<text>实时汇率0.09</text>
+	<view class="listDesc">
+		<text>{{book.bookName}}</text>
+		<text>实时汇率0.09</text>
+	</view>
+	<view class="listDetail">
+		<view class="listItem">
+			<text>总资产</text>
+			<text  wx:if="{{isShowAmount}}">{{book.currAmount}}</text>
+			<text wx:else>{{hiddenFlag}}</text>
 		</view>
-		<view class="listDetail">
-			<view class="listItem">
-				<text>总资产</text>
-				<text>{{book.currAmount}}</text>
-			</view>
-			<view class="listItem">累计</view>
-			<view class="listItem">累计</view>
-			<view>年化</view>
+		<view class="listItem">
+			<text>累计收益率</text>
+			<text>0</text>
+		</view>
+		<view class="listItem">
+			<text>年化收益率</text>
+			<text>0</text>
 		</view>
 	</view>
+</view>
