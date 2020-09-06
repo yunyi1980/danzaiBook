@@ -5,7 +5,7 @@ cloud.init({
   env: cloud.DYNAMIC_CURRENT_ENV
 })
 
-const addBook = async ({ bookName, amount, date }) => {
+const addBook = async ({ bookName, initAmount, initDate, currency }) => {
   const wxContext = cloud.getWXContext()
   const db = cloud.database();
   const openid = wxContext.OPENID;
@@ -13,9 +13,9 @@ const addBook = async ({ bookName, amount, date }) => {
   return await db.collection('accountBook').add({
     data: {
       bookName,
-      initAmount: amount,
-      initDate: date,
-      currency: 'CNY',
+      initAmount,
+      initDate,
+      currency,
       createTime: new Date(),
       isDeleted: false,
       openid
@@ -35,9 +35,7 @@ exports.main = async (event, context) => {
   } catch (err) {
     return {
       event,
-      openid: wxContext.OPENID,
-      appid: wxContext.APPID,
-      unionid: wxContext.UNIONID,
+      msg:'fail: ' + err
     }
   }
 }

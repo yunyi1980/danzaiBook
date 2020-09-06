@@ -3,7 +3,7 @@
     "strictNullChecks": true,
     "noImplicitAny": true,
     "module": "CommonJS",
-    "target": "ES5",
+    "target": "ES6",
     "allowJs": false,
     "experimentalDecorators": true,
     "noImplicitThis": true,
@@ -19,8 +19,8 @@
     "pretty": true,
     "strictPropertyInitialization": true,
     "lib": ["es5"],
-    // "typeRoots": ["./node_modules/typescript/"],
-    "types": ["miniprogram-api-typings"]
+    "typeRoots": ["./node_modules/miniprogram-api-typings/types"],
+    // "types": ["miniprogram-api-typings"]
   },
   "include": [
     "./**/*.ts"

@@ -1,5 +1,8 @@
-import {toFormatString} from '../../utils/dateHelper'
-import {book} from '../../dataModel/data'
+import { toFormatString } from '../../utils/dateHelper'
+import { book } from '../../dataModel/data'
+
+interface pageData extends book {
+}
 
 Page({
 
@@ -24,49 +27,13 @@ Page({
     const newBook: book = {
       bookName: '',
       bookid: '',
-      initDate: new Date(),
+      initDate: currDate,
       initAmount: 0,
       currency: 'CNY',
     }
     this.setData({
-      currDate,
       ...newBook
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
   },
 
   /**
@@ -76,41 +43,42 @@ Page({
 
   // },
 
-  onDateChange: function (event) {
-    const {detail:{value}} = event
+  onDateChange: function (event: any) {
+    const { detail: { value } } = event
     this.setData({
-      date: value,
+      initDate: value,
     })
   },
 
-  onNameChange: function (event) {
-    const {detail:{value}} = event
+  onNameChange: function (event: any) {
+    const { detail: { value } } = event
     this.setData({
       bookName: value,
     })
   },
 
-  onAmountChange: function (event) {
-    const {detail:{value}} = event
+  onAmountChange: function (event: any) {
+    const { detail: { value } } = event
     this.setData({
-      amount: value,
+      initAmount: value,
     })
   },
 
   onAddBook: function () {
-    const {bookName, amount, date} = this.data;
+    const { bookName, initAmount, initDate, currency } = this.data as pageData;
     wx.cloud.callFunction({
       name: "addBook",
-      data:{
+      data: {
         bookName,
-        amount,
-        date
+        initAmount,
+        initDate,
+        currency,
       },
     }).then(res => {
       console.log('调用success', res)
       wx.navigateBack({
         delta: 0,
       })
-    }).catch((err)=>console.log(err))
+    }).catch((err) => console.log(err))
   }
 })

@@ -9,7 +9,7 @@
 	</view>
 	<picker mode="date" bindchange="onDateChange">
 		<view class="picker">
-			当前选择: {{date || currDate}}
+			当前选择: {{initDate}}
 		</view>
 	</picker>
 
