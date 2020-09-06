@@ -3,17 +3,17 @@
 	<view class="column-container title-container">
 		<view class="total">
 			<text class="container">总资产（元）</text>
-			<text class="container">{{totalAsset}}</text>
+			<text class="container">{{totalAmount}}</text>
 		</view>
 		<view class="row-container">
 			<view class="left">
 				<text class="container">累计收益（元）</text>
-				<text class="container">{{totalAsset}}</text>
+				<text class="container">{{totalIncome}}</text>
 			</view>
 			<view class="line"></view>
 			<view>
 				<text class="container">累计投入（元）</text>
-				<text class="container">{{totalAsset}}</text>
+				<text class="container">{{totalCost}}</text>
 			</view>
 		</view>
 	</view>

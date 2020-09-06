@@ -13,6 +13,7 @@ const addBook = async ({ bookName, initAmount, initDate, currency }) => {
   return await db.collection('accountBook').add({
     data: {
       bookName,
+      currAmount: initAmount,
       initAmount,
       initDate,
       currency,
@@ -29,13 +30,13 @@ exports.main = async (event, context) => {
     const re = await addBook(event);
 
     return {
-      msg:'success'
+      msg: 'success'
     }
 
   } catch (err) {
     return {
       event,
-      msg:'fail: ' + err
+      msg: 'fail: ' + err
     }
   }
 }
