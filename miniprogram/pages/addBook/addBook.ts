@@ -30,7 +30,8 @@ Page({
       initDate: currDate,
       initAmount: 0,
       currency: 'CNY',
-      currAmount: 0
+      currAmount: 0,
+      desc:'',
     }
     this.setData({
       ...newBook
@@ -62,6 +63,13 @@ Page({
     const { detail: { value } } = event
     this.setData({
       initAmount: parseFloat(value),
+    })
+  },
+
+  onDesChange: function (event: any) {
+    const { detail: { text } } = event
+    this.setData({
+      desc: text,
     })
   },
 

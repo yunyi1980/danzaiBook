@@ -1,1 +1,8 @@
 /* pages/addBook/addBook.wxss */
+
+.input-label-container {
+  background-color: #fff;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #515151;
+  padding: 0 20rpx;
+}
