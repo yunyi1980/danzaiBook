@@ -1,9 +1,8 @@
 {
   "pages": [
-    "pages/addBook/addBook",
     "pages/book/book",
+    "pages/addBook/addBook",
 
-  
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",

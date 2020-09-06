@@ -1,6 +1,4 @@
-.row-container {
-  display: flex;
-  flex-direction: row;
+.space-around {
   justify-content: space-around;
 }
 
@@ -11,6 +9,7 @@
 .title-container {
   background-color: #1296db;
   color: white;
+  align-items: center;
 }
 
 .title-container .line {
@@ -19,8 +18,16 @@
   opacity: 0.5;
 }
 
+.title-container .title-bottom{
+  width: 100%;
+}
+
 .btn-container {
   background-color: #fff;
   width: 100%;
+}
+
+.control-container{
+  margin: 20rpx 20rpx;
 }
 

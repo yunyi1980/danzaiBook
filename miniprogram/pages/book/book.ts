@@ -5,6 +5,7 @@ interface pageData {
   totalAmount: number, //总资产
   totalCost: number, // 总投入
   totalIncome: number, // 总收益
+  isShowAmount?: boolean, // 是否显示资产
 }
 
 // interface response extends pageData{
@@ -19,6 +20,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isShowAmount: true
   },
 
   /**
@@ -117,6 +119,12 @@ Page({
       totalCost,
       totalIncome: 0,
     }
+  },
+
+  onToggleShowAmount: function () {
+    this.setData({
+      isShowAmount: !this.data.isShowAmount
+    })
   }
 
 })

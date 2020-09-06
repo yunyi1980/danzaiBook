@@ -1,3 +1,5 @@
+@import "./style/iconfont.wxss";
+
 .page {
   background-color: rgb(245, 246, 251);
 }
@@ -10,6 +12,14 @@
 .row-container {
   display: flex;
   flex-direction: row;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.space-between{
+  justify-content: space-between;
 }
 
 .input-holder{
