@@ -1,0 +1,5 @@
+<view class="column-container .item-center">
+  <view class="`${{type}} .button`" bindtap="onBtnTap">
+    {{text}}
+  </view>
+</view>

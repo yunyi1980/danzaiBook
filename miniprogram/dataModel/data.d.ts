@@ -15,4 +15,9 @@ interface book {
   desc?: string, // 账本描述
 }
 
-export {user, book};
+declare enum btnType {
+  primary = 'primary',
+  default = 'default'
+}
+
+export {user, book, btnType as btnType};

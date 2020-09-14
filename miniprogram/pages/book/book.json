@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "x-bookContainer": "/components/bookContainer/bookContainer",
-    "dz-title-container":"/components/DZTitleContainer/DZTitleContainer"
+    "dz-title-container":"/components/DZTitleContainer/DZTitleContainer",
+    "dz-button":"/components/DZButton/DZButton"
   }
 }

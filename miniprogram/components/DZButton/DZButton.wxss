@@ -1,0 +1,23 @@
+@import '../../app.wxss';
+
+.button {
+  width: 642rpx;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+
+  font-size: 24rpx;
+
+}
+
+.primary{
+  background-color: #3f98f3;
+  color: #fff;
+}
+
+.default{
+  color: #3f98f3;
+  border: #3f98f3 2rpx solid;
+}

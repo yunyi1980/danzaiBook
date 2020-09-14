@@ -5,20 +5,7 @@
     "pages/addRecord/addRecord",
     "pages/bookDetail/bookDetail",
  
-    "pages/bookConfig/bookConfig",
-
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/openapi/openapi",
-    "pages/openapi/serverapi/serverapi",
-    "pages/openapi/callback/callback",
-    "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
-    "pages/im/room/room"
+    "pages/bookConfig/bookConfig"
   ],
   "window": {
     "backgroundColor": "#F3F6FC",
@@ -38,7 +25,7 @@
         "selectedIconPath": "images/tab/tab_book_active.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/book/book",
         "text": "我的",
         "iconPath": "images/tab/tab_me.png",
         "selectedIconPath": "images/tab/tab_me_active.png"
