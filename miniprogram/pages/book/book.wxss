@@ -16,6 +16,7 @@
   border-right: 1rpx solid #fff;
   border-left: 1rpx solid #fff;
   opacity: 0.5;
+  margin-bottom: 22rpx;
 }
 
 .title-container .title-bottom{

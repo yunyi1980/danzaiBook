@@ -1,23 +1,19 @@
 <!--pages/book/book.wxml-->
 <view class="page">
 	<view class="column-container title-container">
-		<view class="total column-container item-center">
-			<text class="container">总资产（元）</text>
-			<text class="container" wx:if="{{isShowAmount}}">{{totalAmount}}</text>
-			<text class="container" wx:else>{{hiddenFlag}}</text>
-		</view>
+		<dz-title-container title="总资产（元）" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}"
+			value="{{totalAmount}}">
+		</dz-title-container>
 		<view class="row-container space-around title-bottom">
-			<view class="left column-container item-center">
-				<text class="container">累计收益（元）</text>
-				<text class="container" wx:if="{{isShowAmount}}">{{totalIncome}}</text>
-				<text class="container" wx:else>{{hiddenFlag}}</text>
-			</view>
+			<dz-title-container title="累计收益（元）" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}"
+				value="{{totalIncome}}">
+			</dz-title-container>
+			
 			<view class="line"></view>
-			<view class="column-container item-center">
-				<text class="container">累计投入（元）</text>
-				<text class="container" wx:if="{{isShowAmount}}">{{totalCost}}</text>
-				<text class="container" wx:else>{{hiddenFlag}}</text>
-			</view>
+
+			<dz-title-container title="累计投入（元）" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}"
+				value="{{totalCost}}">
+			</dz-title-container>
 		</view>
 	</view>
 
@@ -25,17 +21,19 @@
 		<view class="row-container space-between control-container total-tip">
 			<view>
 				<text>我的账户</text>
-				<text wx:if="{{isShowAmount}}" class="iconfont icon-Group-25 common-fontsize" bindtap="onToggleShowAmount"></text>
+				<text wx:if="{{isShowAmount}}" class="iconfont icon-Group-25 common-fontsize"
+					bindtap="onToggleShowAmount"></text>
 				<text wx:else class="iconfont icon-Group-26" bindtap="onToggleShowAmount"></text>
 			</view>
 			<view>
 				<text class="color-active">隐藏汇总</text>
-			</view>		
+			</view>
 		</view>
-	
-		<block wx:for="{{bookList}}" wx:for-index="idx" wx:for-item="book" wx:key="bookName" >
-		<!-- 请额外注意 一定要 bind:onBookItemTap 事件名称 onBookItemTap 和 子组件触发的事件保持一致-->
-			<x-bookContainer book="{{book}}" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}" bind:onBookItemTap="onItemTap"></x-bookContainer>
+
+		<block wx:for="{{bookList}}" wx:for-index="idx" wx:for-item="book" wx:key="bookName">
+			<!-- 请额外注意 一定要 bind:onBookItemTap 事件名称 onBookItemTap 和 子组件触发的事件保持一致-->
+			<x-bookContainer book="{{book}}" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}"
+				bind:onBookItemTap="onItemTap"></x-bookContainer>
 		</block>
 	</view>
 

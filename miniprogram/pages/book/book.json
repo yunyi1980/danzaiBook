@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "x-bookContainer": "/components/bookContainer/bookContainer"
+    "x-bookContainer": "/components/bookContainer/bookContainer",
+    "dz-title-container":"/components/DZTitleContainer/DZTitleContainer"
   }
 }

@@ -1,0 +1,19 @@
+/* components/DZTitleContainer.wxss */
+
+@import '../../app.wxss';
+
+.title-container{
+  padding-bottom: 22rpx;
+  color: #feffff;
+  font-weight: bold;
+}
+
+.title-container .title{
+  font-size: 20rpx;
+  line-height: 28rpx;
+}
+
+.title-container .content{
+  font-size: 42rpx;
+  line-height: 58rpx;
+}
