@@ -12,8 +12,8 @@
 
 ## 基本颜色
 
-· active #1296db
-.unactive #515151
+·active #3f98f3
+.unactive #F3F6FC
 
 ## 数据字典
 

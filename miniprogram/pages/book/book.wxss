@@ -7,7 +7,7 @@
 }
 
 .title-container {
-  background-color: #1296db;
+  background-color: #3f98f3;
   color: white;
   align-items: center;
 }
@@ -31,3 +31,8 @@
   margin: 20rpx 20rpx;
 }
 
+.total-tip {
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #323534;
+}

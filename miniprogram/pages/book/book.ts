@@ -115,9 +115,10 @@ Page({
   /**
    * 
    */
-  onItemTap: function (){
+  onItemTap: function (event: any){
+    const currBook = event?.detail as book;
     wx.navigateTo({
-      url: "../addRecord/addRecord"
+      url: `../bookDetail/bookDetail?bookid=${currBook._id}`
     })
   },
 

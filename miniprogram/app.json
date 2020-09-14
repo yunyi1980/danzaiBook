@@ -3,12 +3,14 @@
     "pages/book/book",
     "pages/addBook/addBook",
     "pages/addRecord/addRecord",
+    "pages/bookDetail/bookDetail",
+ 
+    "pages/bookConfig/bookConfig",
 
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/openapi/openapi",
@@ -19,15 +21,15 @@
     "pages/im/room/room"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#F3F6FC",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarBackgroundColor": "#3f98f3",
     "navigationBarTitleText": "蛋仔账本",
     "navigationBarTextStyle": "black"
   },
   "tabBar":{
-    "color": "#515151",
-    "selectedColor": "#1296db",
+    "color": "#F3F6FC",
+    "selectedColor": "#3f98f3",
     "list": [
       {
         "pagePath": "pages/book/book",

@@ -3,21 +3,55 @@
   flex-direction: column;
   background-color: #FFF;
   margin: 20rpx 20rpx;
+  padding: 0 16rpx;
 }
 
 .listContainer .listDesc {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2rpx solid;
+  padding:16rpx 0 12rpx;
 }
 
 .listContainer .listDetail {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  padding: 12rpx 0;
 }
 
 .listContainer .listItem {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+
+.listContainer .container-tip {
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #8d93a8;
+  font-weight: bold;
+}
+
+.listContainer .line {
+  opacity: 0.14;
+  border: 1rpx solid #979797;
+  height: 2rpx;
+}
+
+.listContainer .text-tip {
+  font-size: 20rpx;
+  line-height: 28rpx;
+  color: #8d93a8;
+  font-weight: bold;
+}
+
+.text-content {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #273848;
+  font-weight: bold;
+}
+
+.earnings {
+  color: #EB7463;
 }

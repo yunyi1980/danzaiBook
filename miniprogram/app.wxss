@@ -1,7 +1,7 @@
 @import "./style/iconfont.wxss";
 
 .page {
-  background-color: rgb(245, 246, 251);
+  background-color: #F3F6FC;
 }
 
 .column-container {
@@ -24,4 +24,20 @@
 
 .input-holder{
   text-align: right;
+}
+
+.base-background-color-active{
+  background-color: #3f98f3;
+}
+
+.base-background-color{
+  background-color: #F3F6FC;
+}
+
+.color-active {
+  color: #3f98f3 !important;
+}
+
+.common-fontsize {
+  font-size: 24rpx;
 }

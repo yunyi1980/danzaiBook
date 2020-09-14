@@ -21,7 +21,7 @@ Component({
    */
   methods: {
     onBookTap: function () {
-      this.triggerEvent('onBookItemTap')
+      this.triggerEvent('onBookItemTap', this.properties.book)
     }
   }
 })

@@ -1,0 +1,17 @@
+<!--账本的详情页面-->
+<view class="page">
+<view>
+头部
+</view>
+
+<view class="row-container">
+<view>显示总资产</view>
+
+<view>
+显示累计收益
+</view>
+
+ 
+</view>
+
+</view>
