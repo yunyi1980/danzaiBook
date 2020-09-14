@@ -19,12 +19,12 @@ Page({
     const currDate = toFormatString(new Date())
     const newBook: book = {
       bookName: '',
-      bookid: '',
+      _id: '',
       initDate: currDate,
       initAmount: 0,
       currency: 'CNY',
       currAmount: 0,
-      desc:'',
+      desc: '',
     }
     this.setData({
       ...newBook
@@ -39,9 +39,9 @@ Page({
   // },
 
   onDateChange: function (event: any) {
-    const { detail: { value } } = event
+    const { detail } = event
     this.setData({
-      initDate: value,
+      initDate: detail,
     })
   },
 
@@ -53,16 +53,16 @@ Page({
   },
 
   onAmountChange: function (event: any) {
-    const { detail: { value } } = event
+    const { detail } = event
     this.setData({
-      initAmount: parseFloat(value),
+      initAmount: parseFloat(detail),
     })
   },
 
   onDesChange: function (event: any) {
-    const { detail: { text } } = event
+    const { detail } = event
     this.setData({
-      desc: text,
+      desc: detail,
     })
   },
 

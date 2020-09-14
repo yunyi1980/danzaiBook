@@ -1,0 +1,21 @@
+@import '../../app.wxss';
+
+.input-label-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx 0 20rpx;
+  height: 86rpx;
+  background-color: #feffff;
+}
+
+.label{
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #9da1b1;
+}
+
+.picker{
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #525454;
+}

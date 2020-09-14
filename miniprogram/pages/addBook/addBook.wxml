@@ -1,25 +1,38 @@
 <!--pages/addBook/addBook.wxml-->
 <view class="page">
-	<view>
-		<view>记总资产</view>
-		<view>你可以输入任意一天的资产</view>
+	<view class="title-container">
+		<view class="title-tip">记总资产</view>
+		<view class="title-tip-desc">你可以输入任意一天的资产</view>
 	</view>
-	<view class="row-container input-label-container">
+ 
+	<dz-input placeholder="点击输入" labelText="账户名称" bind:onNameChange="onNameChange" valueEventName="onNameChange"></dz-input>
+
+	<view class="line"></view>
+
+	<dz-input placeholder="点击输入" labelText="总资产" bind:onAmountChange="onAmountChange" type="digit" valueEventName="onAmountChange"></dz-input>
+
+	<view class="line"></view>
+
+	<dz-picker labelText="日期" initValue="{{initDate}}" bind:onDateChange="onDateChange" mode="date" valueEventName="onDateChange"></dz-picker>
+
+	<!-- <dz-input placeholder="" labelText="日期" bind:onAmountChange="onAmountChange" type="digit" valueEventName="onAmountChange"></dz-input> -->
+
+	<!-- <view class="row-container input-label-container">
 		<text>账户名称</text>
 		<input class="weui-input" maxlength="20" placeholder="点击输入" bindinput="onNameChange" placeholder-class="input-holder"/>
-	</view>
-	<view class="row-container input-label-container">
+	</view> -->
+	<!-- <view class="row-container input-label-container">
 		<text>总资产</text>
 		<input class="weui-input" type="digit" placeholder="点击输入" bindinput="onAmountChange" placeholder-class="input-holder"/>
-	</view>
-	<view class="row-container input-label-container">
+	</view> -->
+	<!-- <view class="row-container input-label-container">
 		<text>日期</text>
 		<picker mode="date" bindchange="onDateChange">
 			<view class="picker input-label-container">
 				{{initDate}}
 			</view>
 		</picker>
-	</view>
+	</view> -->
 
 	<view>
 		<text>这里填写投资日志</text>
@@ -28,7 +41,6 @@
 
 	<view>账户设置（待开发）</view>
 
-	<view>
-		<button type="primary" bindtap="onAddBook">确定</button>
-	</view>
+	<dz-button type="primary" text="确定" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
+
 </view>

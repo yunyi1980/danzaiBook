@@ -1,0 +1,8 @@
+<view class="row-container input-label-container">
+		<text class="label">{{labelText}}</text>
+		<picker mode="{{mode}}" bindchange="onValueChange">
+			<view class="picker">
+				{{initValue}}
+			</view>
+		</picker>
+	</view>
