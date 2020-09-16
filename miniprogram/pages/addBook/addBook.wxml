@@ -7,11 +7,7 @@
  
 	<dz-input placeholder="点击输入" labelText="账户名称" bind:onNameChange="onNameChange" valueEventName="onNameChange"></dz-input>
 
-	<!-- <view class="line"></view> -->
-
 	<dz-input placeholder="点击输入" labelText="总资产" bind:onAmountChange="onAmountChange" type="digit" valueEventName="onAmountChange"></dz-input>
-
-	<!-- <view class="line"></view> -->
 
 	<dz-picker labelText="日期" initValue="{{initDate}}" bind:onDateChange="onDateChange" mode="date" valueEventName="onDateChange"></dz-picker>
 

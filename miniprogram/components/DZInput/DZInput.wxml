@@ -2,7 +2,7 @@
   <view class="row-container input-label-container">
     <text class="label">{{labelText}}</text>
     <input class="input-container" type="{{type}}" maxlength="20" placeholder="{{placeholder}}"
-      placeholder-class="placeholder-container" type="{{type}}" bindinput="{{onValueChange}}" />
+      placeholder-class="placeholder-container" type="{{type}}" bindinput="onValueChange" />
   </view>
   <view class="line"></view>
 </view>

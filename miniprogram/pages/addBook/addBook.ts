@@ -48,9 +48,9 @@ Page({
   },
 
   onNameChange: function (event: any) {
-    const { detail: { value } } = event
+    const { detail } = event
     this.setData({
-      bookName: value,
+      bookName: detail,
     })
   },
 
