@@ -5,6 +5,7 @@
     "pages/addRecord/addRecord",
     "pages/bookDetail/bookDetail",
  
+    "pages/updateBookAmount/updateBookAmount",
     "pages/bookConfig/bookConfig"
   ],
   "window": {

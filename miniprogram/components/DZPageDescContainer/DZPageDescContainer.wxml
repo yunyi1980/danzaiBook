@@ -1,0 +1,4 @@
+<view class="title-container">
+  <view class="title-tip">{{title}}</view>
+  <view class="title-tip-desc">{{subTitle}}</view>
+</view>

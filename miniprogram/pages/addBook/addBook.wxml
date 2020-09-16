@@ -1,20 +1,12 @@
 <!--pages/addBook/addBook.wxml-->
 <view class="page">
-	<view class="title-container">
-		<view class="title-tip">记总资产</view>
-		<view class="title-tip-desc">你可以输入任意一天的资产</view>
-	</view>
+  <dz-page-desc-container title="记总资产" subTitle="你可以输入任意一天的资产"></dz-page-desc-container>  
  
 	<dz-input placeholder="点击输入" labelText="账户名称" bind:onNameChange="onNameChange" valueEventName="onNameChange"></dz-input>
 
 	<dz-input placeholder="点击输入" labelText="总资产" bind:onAmountChange="onAmountChange" type="digit" valueEventName="onAmountChange"></dz-input>
 
 	<dz-picker labelText="日期" initValue="{{initDate}}" bind:onDateChange="onDateChange" mode="date" valueEventName="onDateChange"></dz-picker>
-
-	<!-- <view>
-		<text>这里填写投资日志</text>
-		<editor bindinput="onDesChange" placeholder="独来独往，亦心往自由，始于斯，待回首"></editor>
-	</view> -->
 
 	<dz-editor bind:onDescChange="onDescChange" valueEventName="onDescChange"></dz-editor>
 
