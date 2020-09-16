@@ -14,24 +14,6 @@
     "navigationBarTitleText": "蛋仔账本",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "color": "#F3F6FC",
-    "selectedColor": "#3f98f3",
-    "list": [
-      {
-        "pagePath": "pages/book/book",
-        "text": "账本",
-        "iconPath": "images/tab/tab_book.png",
-        "selectedIconPath": "images/tab/tab_book_active.png"
-      },
-      {
-        "pagePath": "pages/book/book",
-        "text": "我的",
-        "iconPath": "images/tab/tab_me.png",
-        "selectedIconPath": "images/tab/tab_me_active.png"
-      }
-    ]
-  },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
 }
