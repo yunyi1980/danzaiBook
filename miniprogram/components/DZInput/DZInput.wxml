@@ -1,4 +1,8 @@
-<view class="row-container input-label-container">
-  <text class="label">{{labelText}}</text>
-  <input class="input-container" type="{{type}}" maxlength="20" placeholder="{{placeholder}}" placeholder-class="placeholder-container" type="{{type}}" bindinput="{{onValueChange}}"/>
+<view class="input-component column-container item-center">
+  <view class="row-container input-label-container">
+    <text class="label">{{labelText}}</text>
+    <input class="input-container" type="{{type}}" maxlength="20" placeholder="{{placeholder}}"
+      placeholder-class="placeholder-container" type="{{type}}" bindinput="{{onValueChange}}" />
+  </view>
+  <view class="line"></view>
 </view>

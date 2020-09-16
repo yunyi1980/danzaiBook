@@ -34,8 +34,7 @@
 
 .listContainer .line {
   opacity: 0.14;
-  border: 1rpx solid #979797;
-  height: 2rpx;
+  border-bottom: 1px solid #979797;
 }
 
 .listContainer .text-tip {

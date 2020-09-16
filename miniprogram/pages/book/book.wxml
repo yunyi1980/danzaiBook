@@ -36,10 +36,7 @@
 		</block>
 	</view>
 
-	<!-- <view class="btn-area row-container">
-		<button type="primary" plain="true" size="750" bindtap="onAddBook">新增账户</button>
-	</view> -->
-	<dz-button type="primary" text="确定" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
+	<dz-button type="primary" text="+新增账户" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
 
 
 </view>

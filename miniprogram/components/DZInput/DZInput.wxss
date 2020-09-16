@@ -1,11 +1,16 @@
 @import '../../app.wxss';
 
+.input-component{
+  padding: 0 20rpx 0 20rpx;
+  background-color: #feffff;
+  height: 86rpx;
+}
+
 .input-label-container {
   justify-content: space-between;
   align-items: center;
-  padding: 0 20rpx 0 20rpx;
-  height: 86rpx;
-  background-color: #feffff;
+  height: 100%;
+  width: 100%;
 }
 
 .label{
@@ -24,4 +29,10 @@
   line-height: 34rpx;
   color: #525454;
   text-align: right;
+}
+
+.line {
+  width: 100%;
+  opacity: 0.14;
+  border-bottom: 1px solid #979797;
 }

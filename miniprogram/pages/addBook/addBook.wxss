@@ -3,7 +3,7 @@
 .line {
   margin: 0 20rpx;
   opacity: 0.32;
-  border: 1rpx solid #979797;
+  border-bottom: 1px solid #979797;
 }
 
 .title-container{
@@ -21,4 +21,8 @@
   font-size: 20rpx;
   line-height: 28rpx;
   color: #aeb0b2;
+}
+
+.btn-container {
+  margin-top: 26rpx;
 }
