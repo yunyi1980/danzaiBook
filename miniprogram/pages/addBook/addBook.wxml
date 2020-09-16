@@ -15,31 +15,14 @@
 
 	<dz-picker labelText="日期" initValue="{{initDate}}" bind:onDateChange="onDateChange" mode="date" valueEventName="onDateChange"></dz-picker>
 
-	<!-- <dz-input placeholder="" labelText="日期" bind:onAmountChange="onAmountChange" type="digit" valueEventName="onAmountChange"></dz-input> -->
-
-	<!-- <view class="row-container input-label-container">
-		<text>账户名称</text>
-		<input class="weui-input" maxlength="20" placeholder="点击输入" bindinput="onNameChange" placeholder-class="input-holder"/>
-	</view> -->
-	<!-- <view class="row-container input-label-container">
-		<text>总资产</text>
-		<input class="weui-input" type="digit" placeholder="点击输入" bindinput="onAmountChange" placeholder-class="input-holder"/>
-	</view> -->
-	<!-- <view class="row-container input-label-container">
-		<text>日期</text>
-		<picker mode="date" bindchange="onDateChange">
-			<view class="picker input-label-container">
-				{{initDate}}
-			</view>
-		</picker>
-	</view> -->
-
-	<view>
+	<!-- <view>
 		<text>这里填写投资日志</text>
 		<editor bindinput="onDesChange" placeholder="独来独往，亦心往自由，始于斯，待回首"></editor>
-	</view>
+	</view> -->
 
-	<view>账户设置（待开发）</view>
+	<dz-editor bind:onDescChange="onDescChange" valueEventName="onDescChange"></dz-editor>
+
+	<!-- <view>账户设置（待开发）</view> -->
 
 	<dz-button type="primary" text="确定" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
 

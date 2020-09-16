@@ -1,8 +1,8 @@
-import {book} from '../../dataModel/data'
+import {Ibook} from '../../dataModel/data'
 import {HIDDEN_AMOUNT_FLAG} from '../../utils/commonHelper'
 
 interface pageData {
-  bookList: book[],
+  bookList: Ibook[],
   totalAmount: number, //总资产
   totalCost: number, // 总投入
   totalIncome: number, // 总收益
@@ -66,7 +66,7 @@ Page({
       name: 'getBook',
       data: {},
       success: (res:any) => {
-        const bookList = <book[]>res?.result?.bookList
+        const bookList = <Ibook[]>res?.result?.bookList
         this.setData(this.getBooksData(bookList))
       },
       fail: (err:any) => {
@@ -85,11 +85,11 @@ Page({
    * 根据账目列表计算页面数据
    * @param bookList 
    */
-  getBooksData: function (bookList: book[]): pageData {
+  getBooksData: function (bookList: Ibook[]): pageData {
     let totalAmount:number = 0;
     let totalCost:number = 0;
 
-    bookList.forEach((book:book) => {
+    bookList.forEach((book:Ibook) => {
       totalAmount +=  book.currAmount
       totalCost += book.initAmount
     })
@@ -116,7 +116,7 @@ Page({
    * 
    */
   onItemTap: function (event: any){
-    const currBook = event?.detail as book;
+    const currBook = event?.detail as Ibook;
     wx.navigateTo({
       url: `../bookDetail/bookDetail?bookid=${currBook._id}`
     })

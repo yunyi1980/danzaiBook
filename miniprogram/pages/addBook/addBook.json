@@ -2,6 +2,7 @@
   "usingComponents": {
     "dz-input": "/components/DZInput/DZInput",
     "dz-button": "/components/DZButton/DZButton",
-    "dz-picker": "/components/DZPicker/DZPicker"
+    "dz-picker": "/components/DZPicker/DZPicker",
+    "dz-editor": "/components/DZEditor/DZEditor"
   }
 }

@@ -1,0 +1,4 @@
+<view>
+  <text class="title">投资日志</text>
+  <textarea bindinput="onValueChange" placeholder="独来独往，亦心往自由，始于斯，待回首" class="editor" placeholder-class="placeholder-container" maxlength="200"></textarea>
+</view>

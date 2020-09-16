@@ -1,7 +1,9 @@
 import { toFormatString } from '../../utils/commonHelper'
-import { book } from '../../dataModel/data'
+import { Ibook } from '../../dataModel/data'
 
-interface pageData extends book {
+interface IBookVaildRes {
+  msg: string,
+  isValid: Boolean
 }
 
 Page({
@@ -17,7 +19,7 @@ Page({
    */
   onReady: function () {
     const currDate = toFormatString(new Date())
-    const newBook: book = {
+    const newBook: Ibook = {
       bookName: '',
       _id: '',
       initDate: currDate,
@@ -59,7 +61,7 @@ Page({
     })
   },
 
-  onDesChange: function (event: any) {
+  onDescChange: function (event: any) {
     const { detail } = event
     this.setData({
       desc: detail,
@@ -67,20 +69,50 @@ Page({
   },
 
   onAddBook: function () {
-    const { bookName, initAmount, initDate, currency } = this.data as pageData;
-    wx.cloud.callFunction({
-      name: "addBook",
-      data: {
-        bookName,
-        initAmount,
-        initDate,
-        currency,
-      },
-    }).then(res => {
-      console.log('调用success', res)
-      wx.navigateBack({
-        delta: 0,
+    const book = this.data as Ibook;
+    const isBookValidRes = this.isBookValid(book)
+    if (!isBookValidRes.isValid) {
+      wx.showModal({
+        title: '账户检测提示',
+        content: isBookValidRes.msg,
+        showCancel: false,
+        confirmColor: '#3f98f3',
       })
-    }).catch((err) => console.log(err))
+    } else {
+      wx.cloud.callFunction({
+        name: "addBook",
+        data: {
+          ...book
+        },
+      }).then(res => {
+        console.log('调用success', res)
+        wx.navigateBack({
+          delta: 0,
+        })
+      }).catch((err) => console.log(err))
+    }
+  },
+
+  /**
+   * 数据是否合法
+   */
+  isBookValid: function (book: Ibook): IBookVaildRes {
+    let res: IBookVaildRes = {
+      isValid: true,
+      msg: ''
+    }
+
+    if (!book.bookName) {
+      res.isValid = false
+      res.msg = '账户名称不能为空！'
+    } else if (!book.initAmount) {
+      res.isValid = false
+      res.msg = '需要输入总资产'
+    } else if (!book.initDate) {
+      res.isValid = false
+      res.msg = '需要选中一个时间'
+    }
+
+    return res
   }
 })

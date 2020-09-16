@@ -5,7 +5,7 @@ interface user {
   
 }
 
-interface book {
+interface Ibook {
   _id: string, // 账本唯一标识
   bookName: string, // 账本名称
   initDate: string, // 初始日期 MMMM-YY-dd
@@ -20,4 +20,4 @@ declare enum btnType {
   default = 'default'
 }
 
-export {user, book, btnType as btnType};
+export {user, Ibook as Ibook, btnType as btnType};

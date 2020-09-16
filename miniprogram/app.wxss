@@ -2,6 +2,7 @@
 
 .page {
   background-color: #F3F6FC;
+  max-width: 750rpx;
 }
 
 .column-container {
