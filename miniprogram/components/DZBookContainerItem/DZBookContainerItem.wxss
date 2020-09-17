@@ -1,0 +1,38 @@
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* background-color: #FFF; */
+}
+
+.listContainer .container-tip {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #8d93a8;
+}
+
+.listContainer .line {
+  opacity: 0.14;
+  border-bottom: 1px solid #979797;
+}
+
+.text-tip {
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #8d93a8;
+}
+
+.text-content {
+  font-size: 36rpx;
+  line-height: 40rpx;
+  color: #273848;
+}
+
+.earnings {
+  color: #EB7463;
+}
+
+.loss {
+  color: #54a892;
+}

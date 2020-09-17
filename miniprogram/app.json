@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/book/book",
+    "pages/bookDetail/bookDetail",
+ 
     "pages/addBook/addBook",
     "pages/addRecord/addRecord",
-    "pages/bookDetail/bookDetail",
  
     "pages/updateBookAmount/updateBookAmount",
     "pages/bookConfig/bookConfig"

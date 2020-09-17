@@ -2,18 +2,36 @@
 
 @import '../../app.wxss';
 
-.title-container{
+.title-container {
   padding-bottom: 22rpx;
   color: #feffff;
   font-weight: bold;
 }
 
-.title-container .title{
+.title-container .title {
   font-size: 20rpx;
   line-height: 28rpx;
 }
 
-.title-container .content{
+.title-container .content {
   font-size: 42rpx;
   line-height: 58rpx;
+}
+
+.primary {
+  background-color: #3f98f3;
+  color: #feffff;
+}
+
+.default {
+  background-color: #feffff;
+  color: #b1b2b3;
+}
+
+.default-color {
+  color: #2c3f4d;
+}
+
+.primary-color{
+  color: #feffff;
 }

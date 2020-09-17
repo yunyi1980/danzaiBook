@@ -5,17 +5,31 @@
   align-items: center;
   justify-content: center;
   border-radius: 8rpx;
-  width: 634rpx;
-  height: 84rpx;
+  height: 86rpx;
   font-size: 28rpx;
 }
 
 .primary{
   background-color: #3f98f3;
   color: #fff;
+  width: 634rpx;
 }
 
 .default{
   color: #3f98f3;
   border: #3f98f3 1rpx solid;
+  width: 634rpx;
+}
+
+.sub-primary {
+  background-color: #3f98f3;
+  color: #fff;
+  width: 326rpx;
+}
+
+.sub-default{
+  color: #3f98f3;
+  border: #3f98f3 1rpx solid;
+  width: 326rpx;
+  background-color: #feffff;
 }

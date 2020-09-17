@@ -5,8 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    _id: 'aa133ce55f54b8fd00d854391bc39b4c'
-
+    _id: 'aa133ce55f54b8fd00d854391bc39b4c',
+    totalIncome: 10000,
+    totalCost:10000,
+    isShowAmount: true
   },
 
   /**
@@ -14,7 +16,9 @@ Page({
    */
   onLoad: function (options) {
     this.setData ({
-      bookid: options.bookid || 'aa133ce55f54b8fd00d854391bc39b4c'
+      bookid: options.bookid || 'aa133ce55f54b8fd00d854391bc39b4c',
+      // totalIncome: 10000,
+      // totalCost:10000
     })
   },
 
@@ -29,7 +33,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**

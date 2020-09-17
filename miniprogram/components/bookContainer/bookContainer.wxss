@@ -41,7 +41,6 @@
   font-size: 24rpx;
   line-height: 34rpx;
   color: #8d93a8;
-  font-weight: bold;
 }
 
 .text-content {

@@ -24,6 +24,10 @@ page {
   justify-content: space-between;
 }
 
+.space-around {
+  justify-content: space-around;
+}
+
 .input-holder{
   text-align: right;
 }

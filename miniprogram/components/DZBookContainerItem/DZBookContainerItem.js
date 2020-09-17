@@ -1,21 +1,20 @@
-
+// components/DZBookContainerItem/DZBookContainerItem.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    isShowAmount: Boolean,
     title: String,
-    value: Number,
-    hiddenFlag: String,
-    type: String
+    value: String,
+    isShowAmount: Boolean,
+    hiddenFlag: String
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-   
+
   },
 
   /**

@@ -4,6 +4,8 @@
     "dz-button": "/components/DZButton/DZButton",
     "dz-picker": "/components/DZPicker/DZPicker",
     "dz-editor": "/components/DZEditor/DZEditor",
-    "dz-page-desc-container": "/components/DZPageDescContainer/DZPageDescContainer"
+    "dz-page-desc-container": "/components/DZPageDescContainer/DZPageDescContainer",
+    "dz-title-container":"/components/DZTitleContainer/DZTitleContainer",
+    "dz-book-container-item":"/components/DZBookContainerItem/DZBookContainerItem"
   }
 }

@@ -1,0 +1,5 @@
+<view class="listItem">
+  <text class="text-tip">{{title}}</text>
+  <text wx:if="{{isShowAmount}}" class="text-content">{{value}}</text>
+  <text wx:else class="text-content">{{hiddenFlag}}</text>
+</view>

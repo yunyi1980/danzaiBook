@@ -1,5 +1,5 @@
-<view class="column-container item-center title-container">
+<view class="`column-container item-center title-container ${{type}}`">
   <text class="title">{{title}}</text>
-  <text class="content" wx:if="{{isShowAmount}}">{{value}}</text>
+  <text class="`content ${{type}}-color`" wx:if="{{isShowAmount}}">{{value}}</text>
   <text class="content" wx:else>{{hiddenFlag}}</text>
 </view>
