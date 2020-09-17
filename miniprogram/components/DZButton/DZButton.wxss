@@ -1,15 +1,13 @@
 @import '../../app.wxss';
 
 .button {
-  width: 642rpx;
-  height: 70rpx;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10rpx;
-
-  font-size: 24rpx;
-
+  border-radius: 8rpx;
+  width: 634rpx;
+  height: 84rpx;
+  font-size: 28rpx;
 }
 
 .primary{
@@ -19,5 +17,5 @@
 
 .default{
   color: #3f98f3;
-  border: #3f98f3 2rpx solid;
+  border: #3f98f3 1rpx solid;
 }

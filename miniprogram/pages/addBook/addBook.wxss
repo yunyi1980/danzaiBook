@@ -1,28 +1,5 @@
 /* pages/addBook/addBook.wxss */
 
-.line {
-  margin: 0 20rpx;
-  opacity: 0.32;
-  border-bottom: 1px solid #979797;
-}
-
-.title-container{
-  background-color: #f3f6fc;
-  padding: 26rpx 0 8rpx 20rpx;
-}
-
-.title-tip{
-  font-size: 28rpx;
-  line-height: 40rpx;
-  color: #5e6163;
-}
-
-.title-tip-desc{
-  font-size: 20rpx;
-  line-height: 28rpx;
-  color: #aeb0b2;
-}
-
 .btn-container {
   margin-top: 26rpx;
 }

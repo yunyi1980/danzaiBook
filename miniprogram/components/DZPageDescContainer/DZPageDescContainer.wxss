@@ -1,16 +1,16 @@
-.title-container{
+.title-container {
   background-color: #f3f6fc;
   padding: 26rpx 0 8rpx 20rpx;
 }
 
-.title-tip{
-  font-size: 28rpx;
-  line-height: 40rpx;
+.title-tip {
+  font-size: 32rpx;
+  line-height: 44rpx;
   color: #5e6163;
 }
 
-.title-tip-desc{
-  font-size: 20rpx;
-  line-height: 28rpx;
+.title-tip-desc {
+  font-size: 24rpx;
+  line-height: 34rpx;
   color: #aeb0b2;
 }

@@ -1,28 +1,27 @@
 .title {
-  font-size: 22rpx;
-  line-height: 32rpx;
-  color: #9ba1b1;
-  font-weight: bold;
   margin-left: 20rpx;
   margin-top: 10rpx;
   margin-bottom: 8rpx;
+
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #9ba1b1;
+  font-weight: bold;
 }
 
-.editor{
-  font-size: 24rpx;
-  /* margin-left: 20rpx;
-  margin-right: 20rpx; */
+.editor {
+  font-size: 28rpx;
   padding-left: 20rpx;
   padding-right: 20rpx;
   padding-top: 16rpx;
   padding-bottom: 16rpx;
   height: 180rpx;
-  width: 750rpx;
+  width: 710rpx;
   background-color: #feffff;
 }
 
-.placeholder-container{
-  font-size: 24rpx;
-  line-height: 34rpx;
+.placeholder-container {
+  font-size: 28rpx;
+  line-height: 40rpx;
   color: #c6c8cb;
-  }
+}

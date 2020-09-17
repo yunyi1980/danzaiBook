@@ -1,9 +1,9 @@
 @import '../../app.wxss';
 
-.input-component{
+.input-component {
   padding: 0 20rpx 0 20rpx;
   background-color: #feffff;
-  height: 86rpx;
+  height: 98rpx;
 }
 
 .input-label-container {
@@ -13,22 +13,23 @@
   width: 100%;
 }
 
-.label{
-  font-size: 24rpx;
-  line-height: 34rpx;
+.label {
+  font-size: 28rpx;
+  line-height: 40rpx;
   color: #9da1b1;
 }
 
-.input-container{
+.input-container {
   text-align: right;
 }
 
-.placeholder-container{
-  opacity: 0.50;
-  font-size: 24rpx;
-  line-height: 34rpx;
-  color: #525454;
+.placeholder-container {
   text-align: right;
+
+  opacity: 0.50;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #525454;
 }
 
 .line {

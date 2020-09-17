@@ -9,7 +9,7 @@
 .listContainer .listDesc {
   display: flex;
   justify-content: space-between;
-  padding:16rpx 0 12rpx;
+  padding: 16rpx 0 12rpx;
 }
 
 .listContainer .listDetail {
@@ -26,8 +26,8 @@
 }
 
 .listContainer .container-tip {
-  font-size: 24rpx;
-  line-height: 34rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
   color: #8d93a8;
   font-weight: bold;
 }
@@ -38,14 +38,14 @@
 }
 
 .listContainer .text-tip {
-  font-size: 20rpx;
-  line-height: 28rpx;
+  font-size: 24rpx;
+  line-height: 34rpx;
   color: #8d93a8;
   font-weight: bold;
 }
 
 .text-content {
-  font-size: 28rpx;
+  font-size: 36rpx;
   line-height: 40rpx;
   color: #273848;
   font-weight: bold;
@@ -53,4 +53,8 @@
 
 .earnings {
   color: #EB7463;
+}
+
+.loss {
+  color: #54a892;
 }

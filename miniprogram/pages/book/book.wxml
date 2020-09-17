@@ -3,6 +3,7 @@
 		<dz-title-container title="总资产（元）" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}"
 			value="{{totalAmount}}">
 		</dz-title-container>
+		 
 		<view class="row-container space-around title-bottom">
 			<dz-title-container title="累计收益（元）" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}"
 				value="{{totalIncome}}">
