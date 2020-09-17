@@ -3,7 +3,7 @@
 @import '../../app.wxss';
 
 .title-container {
-  padding-bottom: 22rpx;
+  /* padding-bottom: 22rpx; */
   color: #feffff;
   font-weight: bold;
 }
@@ -32,6 +32,6 @@
   color: #2c3f4d;
 }
 
-.primary-color{
+.primary-color {
   color: #feffff;
 }

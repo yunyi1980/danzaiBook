@@ -33,3 +33,7 @@
 .item-container {
   height: 144rpx;
 }
+
+.chart-container {
+  height: 600rpx;
+}

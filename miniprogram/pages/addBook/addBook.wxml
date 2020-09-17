@@ -1,23 +1,31 @@
-<!--pages/addBook/addBook.wxml-->
+<!-- pages/addBook/addBook.wxml -->
 <view class="page">
-	<dz-page-desc-container title="记总资产" subTitle="你可以输入任意一天的资产"></dz-page-desc-container>
+  <dz-page-desc-container title="记总资产" subTitle="你可以输入任意一天的资产"></dz-page-desc-container>
+  <dz-input
+    placeholder="点击输入"
+    labelText="账户名称"
+    bind:onNameChange="onNameChange"
+    valueEventName="onNameChange"
+  ></dz-input>
+  <dz-input
+    placeholder="点击输入"
+    labelText="总资产"
+    bind:onAmountChange="onAmountChange"
+    type="digit"
+    valueEventName="onAmountChange"
+  ></dz-input>
+  <dz-picker
+    labelText="日期"
+    initValue="{{initDate}}"
+    bind:onDateChange="onDateChange"
+    mode="date"
+    valueEventName="onDateChange"
+  ></dz-picker>
+  <view>
+    <dz-editor bind:onDescChange="onDescChange" valueEventName="onDescChange"></dz-editor>
+  </view>
 
-	<dz-input placeholder="点击输入" labelText="账户名称" bind:onNameChange="onNameChange" valueEventName="onNameChange">
-	</dz-input>
-
-	<dz-input placeholder="点击输入" labelText="总资产" bind:onAmountChange="onAmountChange" type="digit"
-		valueEventName="onAmountChange"></dz-input>
-
-	<dz-picker labelText="日期" initValue="{{initDate}}" bind:onDateChange="onDateChange" mode="date"
-		valueEventName="onDateChange"></dz-picker>
-
-	<view>
-		<dz-editor bind:onDescChange="onDescChange" valueEventName="onDescChange"></dz-editor>
-	</view>
-
-	<!-- <view>账户设置（待开发）</view> -->
-	<view class="btn-container">
-		<dz-button type="primary" text="确定" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
-	</view>
-
+  <view class="btn-container">
+    <dz-button type="primary" text="确定" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
+  </view>
 </view>

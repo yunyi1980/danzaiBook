@@ -1,18 +1,23 @@
 <!--账本的详情页面-->
 <view class="page">
-  <dz-page-desc-container title="我是账户名称" subTitle=""></dz-page-desc-container>
-  <!-- <view>
-    <text></text>
-  </view> -->
+  <dz-page-desc-container title="我是账户名称"></dz-page-desc-container>
 
   <view class="row-container space-around title-bottom title-container item-center">
-    <dz-title-container title="累计投入（元）" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}" type="default"
-      value="{{totalCost}}">
-    </dz-title-container>
+    <dz-title-container
+      title="累计投入（元）"
+      isShowAmount="{{isShowAmount}}"
+      hiddenFlag="{{hiddenFlag}}"
+      type="default"
+      value="{{totalCost}}"
+    ></dz-title-container>
     <view class="line"></view>
-    <dz-title-container title="累计收益（元）" isShowAmount="{{isShowAmount}}" hiddenFlag="{{hiddenFlag}}" type="default"
-      value="{{totalIncome}}">
-    </dz-title-container>
+    <dz-title-container
+      title="累计收益（元）"
+      isShowAmount="{{isShowAmount}}"
+      hiddenFlag="{{hiddenFlag}}"
+      type="default"
+      value="{{totalIncome}}"
+    ></dz-title-container>
   </view>
 
   <view class="item-container-area">
@@ -26,11 +31,23 @@
     </view>
   </view>
 
-
-  <view class="btn-container row-container space-around btn-container">
-    <dz-button type="sub-default" text="转入/转出" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
-
-    <dz-button type="sub-primary" text="记总资产" bind:onAddBookTap="onAddBook" tapEventName="onAddBookTap"></dz-button>
+  <view class="chart-container">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
   </view>
 
+  <view class="btn-container row-container space-around btn-container">
+    <dz-button
+      type="sub-default"
+      text="转入/转出"
+      bind:onAddBookTap="onAddBook"
+      tapEventName="onAddBookTap"
+    ></dz-button>
+
+    <dz-button
+      type="sub-primary"
+      text="记总资产"
+      bind:onAddBookTap="onAddBook"
+      tapEventName="onAddBookTap"
+    ></dz-button>
+  </view>
 </view>
