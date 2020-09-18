@@ -55,13 +55,32 @@
     "game": {
       "list": []
     },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
     "miniprogram": {
       "current": 0,
       "list": [
         {
           "id": -1,
           "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide"
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pages/addAmountRecord/addAmountRecord",
+          "pathName": "pages/addAmountRecord/addAmountRecord",
+          "query": "bookid=c54dac465f61f7090016a40727564d43",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "增加资产变动记录",
+          "pathName": "pages/addAmountRecord/addAmountRecord",
+          "query": "bookid=c54dac465f61f7090016a40727564d43",
+          "scene": null
         }
       ]
     }

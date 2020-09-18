@@ -1,4 +1,4 @@
-// pages/addRecord/addRecord.js
+// pages/addActionRecord/addActionRecord.js
 Page({
 
   /**
@@ -12,14 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(1)
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log(2)
 
   },
 
@@ -27,7 +26,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(3)
 
   },
 
@@ -35,7 +33,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log(4)
+
   },
 
   /**

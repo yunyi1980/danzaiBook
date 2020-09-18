@@ -39,15 +39,15 @@
     <dz-button
       type="sub-default"
       text="转入/转出"
-      bind:onAddBookTap="onAddBook"
-      tapEventName="onAddBookTap"
+      bind:onAddActionRecord="onAddActionRecord"
+      tapEventName="onAddActionRecord"
     ></dz-button>
 
     <dz-button
       type="sub-primary"
       text="记总资产"
-      bind:onAddBookTap="onAddBook"
-      tapEventName="onAddBookTap"
+      bind:onAddAmountRecord="onAddAmountRecord"
+      tapEventName="onAddAmountRecord"
     ></dz-button>
   </view>
 </view>

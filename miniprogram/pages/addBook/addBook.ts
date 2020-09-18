@@ -1,5 +1,5 @@
 import { toFormatString } from "../../utils/commonHelper";
-import { Ibook } from "../../dataModel/data";
+import { IBook } from "../../dataModel/data";
 
 interface IBookVaildRes {
   msg: string;
@@ -17,7 +17,7 @@ Page({
    */
   onReady: function () {
     const currDate = toFormatString(new Date());
-    const newBook: Ibook = {
+    const newBook: IBook = {
       bookName: "",
       _id: "",
       initDate: currDate,
@@ -67,7 +67,7 @@ Page({
   },
 
   onAddBook: function () {
-    const book = this.data as Ibook;
+    const book = this.data as IBook;
     const isBookValidRes = this.isBookValid(book);
     if (!isBookValidRes.isValid) {
       wx.showModal({
@@ -97,7 +97,7 @@ Page({
   /**
    * 数据是否合法
    */
-  isBookValid: function (book: Ibook): IBookVaildRes {
+  isBookValid: function (book: IBook): IBookVaildRes {
     let res: IBookVaildRes = {
       isValid: true,
       msg: "",

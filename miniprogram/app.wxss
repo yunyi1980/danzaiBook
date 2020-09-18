@@ -52,3 +52,7 @@ ec-canvas {
 .common-fontsize {
   font-size: 28rpx;
 }
+
+.btn-container {
+  margin-top: 26rpx;
+}

@@ -1,4 +1,5 @@
-// components/DZPicker/DZPicker.js
+import { toFormatString } from "../../utils/commonHelper";
+
 Component({
   /**
    * 组件的属性列表
@@ -8,23 +9,26 @@ Component({
     placeholder: String,
     mode: String,
     valueEventName: String,
-    initValue: String
+    initValue: {
+      type: String,
+      value: toFormatString(new Date()),
+    },
   },
 
   /**
    * 组件的初始数据
    */
-  data: {
-
-  },
+  data: {},
 
   /**
    * 组件的方法列表
    */
   methods: {
     onValueChange: function (event: any) {
-      const { detail: { value } } = event
-      this.triggerEvent(this.properties.valueEventName, value)
-    }
-  }
-})
+      const {
+        detail: { value },
+      } = event;
+      this.triggerEvent(this.properties.valueEventName, value);
+    },
+  },
+});

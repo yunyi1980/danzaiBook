@@ -1,5 +1,1 @@
 /* pages/addBook/addBook.wxss */
-
-.btn-container {
-  margin-top: 26rpx;
-}

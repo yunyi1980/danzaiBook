@@ -179,4 +179,22 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {},
+
+    /**
+     * 跳转到转入转出页面
+     */
+    onAddActionRecord: function (event) {
+        wx.navigateTo({
+            url: "../addActionRecord/addActionRecord"
+        })
+    },
+
+    /**
+     * 跳转到记录资产页面
+     */
+    onAddAmountRecord: function (event) {
+        wx.navigateTo({
+            url: "../addAmountRecord/addAmountRecord"
+        })
+    }
 });

@@ -1,12 +1,10 @@
 {
   "pages": [
     "pages/book/book",
-    "pages/bookDetail/bookDetail",
- 
     "pages/addBook/addBook",
-    "pages/addRecord/addRecord",
- 
-    "pages/updateBookAmount/updateBookAmount",
+    "pages/bookDetail/bookDetail",
+    "pages/addAmountRecord/addAmountRecord",
+    "pages/addActionRecord/addActionRecord",
     "pages/bookConfig/bookConfig"
   ],
   "window": {
