@@ -1,37 +1,33 @@
-import { IBook } from "../../dataModel/data";
+import { IBookAmountRecord, IValidRes } from "../../dataModel/data";
+import { toFormatString } from "../../utils/commonHelper";
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    amount: Number,
+    record: {
+      _id: "",
+      openid: "",
+      bookid: "",
+      amount: 0,
+      updateDate: toFormatString(new Date()),
+    },
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.bookid);
+    this.setData({
+      bookid: options.bookid,
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    const newBook: IBook = {
-      bookName: "",
-      _id: "",
-      initDate: "",
-      initAmount: 0,
-      currency: "CNY",
-      currAmount: 0,
-      desc: "",
-    };
-    this.setData({
-      ...newBook,
-    });
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
@@ -63,8 +59,11 @@ Page({
    */
   onShareAppMessage: function () {},
 
+  /**
+   * 设置资产
+   * @param event
+   */
   onAmountChange: function (event: any) {
-    console.log(event);
     const { detail } = event;
     this.setData({
       amount: detail,
@@ -72,7 +71,50 @@ Page({
   },
 
   /**
+   * 设置描述
+   * @param event
+   */
+  onDescChange: function (event: any) {
+    const { detail } = event;
+    this.setData({
+      desc: detail,
+    });
+  },
+  /**
    * 增加资产记录
    */
-  onAddAmountRecord: function () {},
+  onAddAmountRecord: function () {
+    // const { detail } = event;
+    // this.setData({
+    //   updateDate: detail,
+    // });
+  },
+
+  /**
+   * 设置日期
+   * @param event
+   */
+  onDateChange: function (event: any) {
+    const { detail } = event;
+    this.setData({
+      updateDate: detail,
+    });
+  },
+
+  isRecordValid: function (record: IBookAmountRecord): IValidRes {
+    let validRes: IValidRes = {
+      isValid: true,
+      msg: "",
+    };
+
+    if (record?.amount) {
+      validRes.isValid = false;
+      validRes.msg = "总资产有误";
+    }
+    // } else if (record.updateDate) {
+    //   validRes.isValid = false;
+    //   validRes.msg = "总资产有误";
+    // }
+    return validRes;
+  },
 });

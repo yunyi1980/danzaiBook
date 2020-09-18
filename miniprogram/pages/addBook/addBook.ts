@@ -1,10 +1,5 @@
 import { toFormatString } from "../../utils/commonHelper";
-import { IBook } from "../../dataModel/data";
-
-interface IBookVaildRes {
-  msg: string;
-  isValid: Boolean;
-}
+import { IBook, IValidRes } from "../../dataModel/data";
 
 Page({
   /**
@@ -97,8 +92,8 @@ Page({
   /**
    * 数据是否合法
    */
-  isBookValid: function (book: IBook): IBookVaildRes {
-    let res: IBookVaildRes = {
+  isBookValid: function (book: IBook): IValidRes {
+    let res: IValidRes = {
       isValid: true,
       msg: "",
     };

@@ -51,3 +51,11 @@ export declare enum btnType {
   primary = "primary",
   default = "default",
 }
+
+/**
+ * 检测数据是否合法 返回
+ */
+export interface IValidRes {
+  msg: string;
+  isValid: Boolean;
+}
