@@ -6,5 +6,15 @@
       "bookName": "小demo",
       "amount": "1233"
     }
+  },
+  {
+    "name": "新增账本记录",
+    "value": {
+      "openid": "34yy4ssdasd",
+      "bookid": "ssdasdasd",
+      "createDate": "2020-09-18",
+      "amount": 8889,
+      "desc": "nihha["
+    }
   }
 ]

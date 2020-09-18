@@ -25,7 +25,7 @@ export interface IActionRecord {
   _id: String; // 主键
   openid: String; // 用户编号
   bookid: String; // 账本编号
-  createTime: String; // 发生时间
+  actionDate: String; // 发生时间
   action: "in" | "out"; // 转入 转出
   amount: Number; // 数量
   netValue?: Number; // 净值
@@ -40,7 +40,7 @@ export interface IBookAmountRecord {
   openid: String; // 用户编号
   bookid: String; // 账本编号
   amount: Number; // 数量
-  createDate: String; // 发生时间
+  updateDate: String; // 发生时间
   desc?: string; // 描述
 }
 
