@@ -22,25 +22,25 @@ export interface IBook {
  * 动作实体类
  */
 export interface IActionRecord {
-  _id: String; // 主键
-  openid: String; // 用户编号
-  bookid: String; // 账本编号
-  actionDate: String; // 发生时间
+  _id: string; // 主键
+  openid: string; // 用户编号
+  bookid: string; // 账本编号
+  actionDate: string; // 发生时间
   action: "in" | "out"; // 转入 转出
-  amount: Number; // 数量
-  netValue?: Number; // 净值
-  shareNumber?: Number; // 份额
+  amount: number; // 数量
+  netValue?: number; // 净值
+  shareNumber?: number; // 份额
   desc?: string; // 描述
 }
 /**
  * 账本资产改变记录
  */
 export interface IBookAmountRecord {
-  _id: String; // 主键
-  openid: String; // 用户编号
-  bookid: String; // 账本编号
-  amount: Number; // 数量
-  updateDate: String; // 发生时间
+  _id: string; // 主键
+  openid: string; // 用户编号
+  bookid: string; // 账本编号
+  amount: number; // 数量
+  updateDate: string; // 发生时间
   desc?: string; // 描述
 }
 

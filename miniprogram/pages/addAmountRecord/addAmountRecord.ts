@@ -6,13 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    record: {
-      _id: "",
-      openid: "",
-      bookid: "",
-      amount: 0,
-      updateDate: toFormatString(new Date()),
-    },
+    _id: "",
+    openid: "",
+    bookid: "",
+    amount: 0,
+    updateDate: toFormatString(new Date()),
   },
 
   /**
@@ -84,10 +82,35 @@ Page({
    * 增加资产记录
    */
   onAddAmountRecord: function () {
-    // const { detail } = event;
-    // this.setData({
-    //   updateDate: detail,
-    // });
+    const record: IBookAmountRecord = {
+      ...this.data,
+    };
+
+    const validRes = this.isRecordValid(record);
+    if (!validRes.isValid) {
+      wx.showModal({
+        title: validRes.msg,
+        showCancel: false,
+        confirmColor: "#3f98f3",
+      });
+    } else {
+      wx.cloud
+        .callFunction({
+          name: "addBookAmountRecord",
+          data: {
+            ...record,
+          },
+        })
+        .then((res) => {
+          console.log(res);
+          wx.navigateBack();
+        })
+        .catch((res) => {
+          wx.showToast({
+            title: res,
+          });
+        });
+    }
   },
 
   /**
@@ -107,7 +130,7 @@ Page({
       msg: "",
     };
 
-    if (record?.amount) {
+    if (record.amount <= 0) {
       validRes.isValid = false;
       validRes.msg = "总资产有误";
     }

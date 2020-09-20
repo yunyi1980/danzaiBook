@@ -1,27 +1,11 @@
 <view class>
   <dz-page-desc-container title="记总资产" subTitle="你可以录入任意一天的资产"></dz-page-desc-container>
-  <dz-input
-    labelText="总资产"
-    placeholder="点击输入"
-    bind:onAmountChange="onAmountChange"
-    type="digit"
-    valueEventName="onAmountChange"
-  ></dz-input>
-  <dz-picker
-    labelText="日期"
-    bind:onDateChange="onDateChange"
-    mode="date"
-    valueEventName="onDateChange"
-  ></dz-picker>
+  <dz-input labelText="总资产" placeholder="点击输入" bind:onAmountChange="onAmountChange" type="digit" valueEventName="onAmountChange"></dz-input>
+  <dz-picker labelText="日期" bind:onDateChange="onDateChange" mode="date" valueEventName="onDateChange"></dz-picker>
   <view>
     <dz-editor bind:onDescChange="onDescChange" valueEventName="onDescChange"></dz-editor>
   </view>
   <view class="btn-container">
-    <dz-button
-      type="primary"
-      text="确定"
-      bind:onAddActionRecord="onAddActionRecord"
-      tapEventName="onAddActionRecord"
-    ></dz-button>
+    <dz-button type="primary" text="确定" bind:onAddActionRecord="onAddAmountRecord" tapEventName="onAddActionRecord"></dz-button>
   </view>
 </view>
